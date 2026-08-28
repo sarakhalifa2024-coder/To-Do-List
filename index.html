@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>To-Do List App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="todo-app">
+    <h1 class="app-title">
+      <i class="fas fa-check-circle title-icon"></i>
+     To‑Do App
+    </h1>
+
+    <div class="stats-filters">
+      <div class="task-counter">
+        <span><i class="fas fa-tasks"></i> Total: <strong id="total-count">0</strong></span>
+        <span><i class="fas fa-check-circle"></i> Done: <strong id="completed-count">0</strong></span>
+        <span><i class="fas fa-hourglass-half"></i> Left: <strong id="remaining-count">0</strong></span>
+      </div>
+
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+        <button class="filter-btn" data-filter="important">⭐ Important</button>
+        <button class="clear-completed-btn" id="clear-completed-btn">
+          <i class="fas fa-trash-alt"></i> Clear completed
+        </button>
+      </div>
+    </div>
+
+    <div class="add-task-section">
+      <div class="search-wrapper">
+        <input type="text" id="search-input" placeholder="🔍 Search tasks..." autocomplete="off">
+      </div>
+
+      <div class="add-task-form">
+        <input type="text" id="new-task-input" placeholder="Write a new task..." autocomplete="off">
+        <button id="add-task-btn">
+          <i class="fas fa-plus-circle"></i> Add
+        </button>
+      </div>
+    </div>
+
+    <div id="task-list" class="task-list-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
